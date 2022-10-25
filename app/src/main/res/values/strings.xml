@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Practica5</string>
+    <string name="send">SEND</string>
+    <string name="next">NEXT</string>
+    <string name="choose_the_correct">Choose the correct</string>
+    <string name="pregunta1">How many genders exists?</string>
+    <string name="respuestaCorrecta1">2</string>
+    <string name="respuestaIncorrecta1">2+</string>
+    <string name="pregunta2">What`s the fourth letter of the abecedary?</string>
+    <string name="pregunta3">Who discover the gravity?</string>
+    <string name="selecciona">You must to select an answer</string>
+    <string name="acierto">It`s correct!</string>
+    <string name="fallo">You have failed</string>
+    <string name="start">Start again</string>
+    <string name="finalisimo">Congratulations, you have finished</string>
+</resources>

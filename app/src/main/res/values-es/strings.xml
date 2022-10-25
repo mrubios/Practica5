@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Practica5</string>
+    <string name="send">ENVIAR</string>
+    <string name="next">SIGUIENTE</string>
+    <string name="choose_the_correct">Elige la correcta</string>
+    <string name="pregunta1">¿Cuántos generos existen?</string>
+    <string name="respuestaCorrecta1">2</string>
+    <string name="respuestaIncorrecta1">2+</string>
+    <string name="pregunta2">¿Cuál es la cuarta letra del abecedario?</string>
+    <string name="pregunta3">¿Quién descubrió la gravedad?</string>
+    <string name="selecciona">Debes seleccionar una respuesta</string>
+    <string name="acierto">¡Has acertado!</string>
+    <string name="fallo">Incorrecto</string>
+    <string name="start">Volver a jugar</string>
+    <string name="finalisimo">Enhorabuena, has acabado</string>
+</resources>
