@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("MENU");
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         getSupportActionBar().hide();
@@ -27,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
     private void cargarBotones() {
         binding.rellayQuizzes.setOnClickListener(v -> {
             Intent intent = new Intent(this, Quizzes.class);
+            startActivity(intent);
+        });
+
+        binding.rellayAmigos.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Login.class);
+            startActivity(intent);
+        });
+
+        binding.rellayCalculadora.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Calculadora.class);
             startActivity(intent);
         });
     }

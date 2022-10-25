@@ -23,6 +23,7 @@ public class Quizzes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("QUIZZ");
         binding = ActivityQuizzesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         try {

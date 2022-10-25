@@ -14,4 +14,16 @@
     <string name="fallo">Incorrecto</string>
     <string name="start">Volver a jugar</string>
     <string name="finalisimo">Enhorabuena, has acabado</string>
+    <string name="mi_calculadora">Mi calculadora</string>
+    <string name="bienvenida">Bienvenidos a mi APP Calculadora</string>
+    <string name="pedir_n1">Introduzca el primer número</string>
+    <string name="n1">Número 1</string>
+    <string name="n2">Número 2</string>
+    <string name="pedir_n2">Introduzca el segundo número</string>
+    <string name="sumar">SUMAR</string>
+    <string name="restar">RESTAR</string>
+    <string name="mult">MULT</string>
+    <string name="dividir">DIVIDIR</string>
+    <string name="resultado">El resultado de la operación es:</string>
+    <string name="error">No introduzcas caracteres no numéricos</string>
 </resources>

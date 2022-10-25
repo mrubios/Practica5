@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/bienvenida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bienvenida"
+            android:textSize="30dp"
+            android:padding="8dp" />
+
+        <ImageView
+            android:id="@+id/calculadora"
+            android:layout_width="192dp"
+            android:layout_height="182dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:paddingBottom="8dp"
+            android:src="@drawable/calc" />
+
+        <TextView
+            android:id="@+id/pedir_n1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/pedir_n1" />
+
+        <EditText
+            android:id="@+id/n1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:inputType="number"
+            android:hint="@string/n1" />
+
+        <TextView
+            android:id="@+id/pedir_n2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/pedir_n2" />
+
+        <EditText
+            android:id="@+id/n2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:inputType="number"
+            android:hint="@string/n2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/suma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+
+                android:gravity="center"
+                android:text="@string/sumar" />
+
+            <Button
+                android:id="@+id/resta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+
+                android:gravity="center"
+                android:text="@string/restar" />
+
+            <Button
+                android:id="@+id/multi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:gravity="center"
+                android:text="@string/mult" />
+
+            <Button
+                android:id="@+id/div"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:gravity="center"
+                android:text="@string/dividir" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/instruccion_resultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resultado" />
+
+        <TextView
+            android:id="@+id/resultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+
+    </LinearLayout>
+</layout>

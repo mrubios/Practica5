@@ -13,4 +13,16 @@
     <string name="fallo">You have failed</string>
     <string name="start">Start again</string>
     <string name="finalisimo">Congratulations, you have finished</string>
+    <string name="mi_calculadora">My calculator</string>
+    <string name="bienvenida">Welcome to my APP Calculator</string>
+    <string name="pedir_n1">Insert the first number</string>
+    <string name="n1">Number 1</string>
+    <string name="n2">Number 2</string>
+    <string name="pedir_n2">Insert the second number</string>
+    <string name="sumar">ADD</string>
+    <string name="restar">SUBS</string>
+    <string name="mult">MULT</string>
+    <string name="dividir">DIVIDE</string>
+    <string name="resultado">The result of the operation is:</string>
+    <string name="error">Do not put not numeric chars</string>
 </resources>

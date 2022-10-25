@@ -17,6 +17,7 @@ public class Resultado extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("RESULTADO");
         binding = ActivityResultadoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
