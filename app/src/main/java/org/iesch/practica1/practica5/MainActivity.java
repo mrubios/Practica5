@@ -40,5 +40,13 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Calculadora.class);
             startActivity(intent);
         });
+        binding.rellayBasket.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Basket.class);
+            startActivity(intent);
+        });
+        binding.rellayPerrete.setOnClickListener(v -> {
+            Intent intent = new Intent(this, EdadCanina.class);
+            startActivity(intent);
+        });
     }
 }
