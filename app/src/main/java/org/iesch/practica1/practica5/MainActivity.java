@@ -48,5 +48,9 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, EdadCanina.class);
             startActivity(intent);
         });
+        binding.rellayMusica.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Musica.class);
+            startActivity(intent);
+        });
     }
 }
