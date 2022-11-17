@@ -2,28 +2,27 @@ package org.iesch.practica1.practica5;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import org.iesch.practica1.practica5.databinding.ActivityDetailLoginBinding;
 
 public class DetailLogin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_detail);
-        setTitle("BIENVENIDA");
-        Bundle extras = getIntent().getExtras();
-        String email = extras.getString("email");
-        String passwd = extras.getString("passwd");
+        setContentView(R.layout.activity_main_login);
+        SharedPreferences preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
+        SharedPreferences.Editor Obj_editor = preferencias.edit();
 
-        ActivityDetailLoginBinding building = ActivityDetailLoginBinding.inflate(getLayoutInflater());
-        setContentView(building.getRoot());
-        getSupportActionBar().setTitle(email);
+        Obj_editor.putString("email","");
+        Obj_editor.putString("pass","");
+        Obj_editor.commit();
 
-
-        building.txtBienvenida.setText("Hola, " + email);
-
+        Intent i = new Intent(DetailLogin.this, Login.class);
+        startActivity(i);
 
     }
 }

@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         binding.rellayAmigos.setOnClickListener(v -> {
-            Intent intent = new Intent(this, Login.class);
+            Intent intent = new Intent(this, DetailLogin.class);
             startActivity(intent);
         });
 
@@ -51,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
         binding.rellayMusica.setOnClickListener(v -> {
             Intent intent = new Intent(this, Musica.class);
             startActivity(intent);
+        });
+        binding.rellayPizzeria.setOnClickListener(v->{
+            Intent i = new Intent(this, Pizzeria.class);
+            startActivity(i);
         });
     }
 }
