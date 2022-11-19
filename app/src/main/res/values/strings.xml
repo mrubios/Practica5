@@ -31,4 +31,5 @@
     <string name="how_old_are_you">How old are you?</string>
     <string name="your_age">Your age</string>
     <string name="alberto_ejemplo">How old are you?</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

@@ -7,14 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import org.iesch.practica1.practica5.PizzaApi.PizzaapiService;
 import org.iesch.practica1.practica5.modelo.Pizza;
-import org.iesch.practica1.practica5.modelo.PizzaRespuesta;
 import org.iesch.practica1.practica5.pizzaAdapter.ListaPizzaAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -27,8 +26,7 @@ public class Pizzeria extends AppCompatActivity {
     private Retrofit retrofit;
     private RecyclerView recyclerView;
     private ListaPizzaAdapter listaPizzaAdapter;
-    private int offset;
-    private boolean aptoParaCargar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,40 +53,33 @@ public class Pizzeria extends AppCompatActivity {
                 int totalItemCount = layoutManager.getItemCount();
                 int pastVisibleItems = layoutManager.findFirstVisibleItemPosition();
 
-                if(aptoParaCargar){
-                    if((visibleItemCount + pastVisibleItems) >= totalItemCount){
+
                         Log.i("Pizza", "Llegamos al final");
-                        aptoParaCargar=false;
-                        offset+=20;
-                        obtenerDatos(offset);
-                    }
-                }
+                        obtenerDatos();
+
+
             }
         });
 
 
 
-        retrofit = new Retrofit.Builder().baseUrl("https://private-anon-9482475d2f-codingpizza.apiary-mock.com/")
+        retrofit = new Retrofit.Builder().baseUrl("https://private-anon-2da0e872d7-codingpizza.apiary-mock.com/v2/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
-        aptoParaCargar=true;
-        offset = 0;
-        obtenerDatos(offset);
+        obtenerDatos();
     }
 
 
-    public void obtenerDatos(int offset){
+    public void obtenerDatos(){
         PizzaapiService service = retrofit.create(PizzaapiService.class);
-        Call<PizzaRespuesta> pizzaRespuestaCall = service.obtenerListaPiza(20, offset);
+        Call<List<Pizza>> pizzaRespuestaCall = service.obtenerListaPiza();
 
-        pizzaRespuestaCall.enqueue(new Callback<PizzaRespuesta>() {
+        pizzaRespuestaCall.enqueue(new Callback<List<Pizza>>() {
             @Override
-            public void onResponse(Call<PizzaRespuesta> call, Response<PizzaRespuesta> response) {
-                aptoParaCargar = true;
+            public void onResponse(Call<List<Pizza>> call, Response<List<Pizza>> response) {
+
                 if(response.isSuccessful()){
-                    PizzaRespuesta pizzaRespuesta = response.body();
-                    ArrayList<Pizza> listaPizza = pizzaRespuesta.getResults();
-                    listaPizzaAdapter.adicionarPizza(listaPizza);
+                    listaPizzaAdapter.adicionarPizza(response.body());
                 }
                 else{
                     Log.i("PIZZA", "onResponse: " + response.errorBody());
@@ -97,8 +88,7 @@ public class Pizzeria extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<PizzaRespuesta> call, Throwable t) {
-                aptoParaCargar=true;
+            public void onFailure(Call<List<Pizza>> call, Throwable t) {
                 Log.i("PIZZA", "onFailure: " + t.getMessage());
             }
         });

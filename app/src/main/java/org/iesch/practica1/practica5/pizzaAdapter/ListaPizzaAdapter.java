@@ -1,6 +1,7 @@
 package org.iesch.practica1.practica5.pizzaAdapter;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -16,21 +17,23 @@ import org.iesch.practica1.practica5.R;
 import org.iesch.practica1.practica5.modelo.Pizza;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListaPizzaAdapter extends RecyclerView.Adapter<ListaPizzaAdapter.ViewHolder> {
 
-    private ArrayList<Pizza> dataset;
+    private List<Pizza> dataset;
     private Context context;
 
     public ListaPizzaAdapter(Context context){
         this.context=context;
-        dataset = new ArrayList<>();
+        this.dataset = new ArrayList<>();
     }
 
     @NonNull
     @Override
     public ListaPizzaAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_pizza, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -47,8 +50,8 @@ public class ListaPizzaAdapter extends RecyclerView.Adapter<ListaPizzaAdapter.Vi
         return dataset.size();
     }
 
-    public void adicionarPizza(ArrayList<Pizza> listaPizza) {
-        dataset.addAll(listaPizza);
+    public void adicionarPizza(List<Pizza> listaPizza) {
+        this.dataset.addAll(listaPizza);
         notifyDataSetChanged();
     }
 

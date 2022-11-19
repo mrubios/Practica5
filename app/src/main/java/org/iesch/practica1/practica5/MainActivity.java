@@ -56,5 +56,10 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(this, Pizzeria.class);
             startActivity(i);
         });
+
+        binding.rellayMapa.setOnClickListener(v->{
+            Intent i = new Intent(this, MapsActivity.class);
+            startActivity(i);
+        });
     }
 }

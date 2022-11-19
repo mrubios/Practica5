@@ -302,6 +302,7 @@
                         android:id="@+id/rellay_pizzeria"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_weight="0.45"
                         android:background="@color/lime_ultra_dark"
                         android:clickable="true"
                         android:foreground="?attr/selectableItemBackground">
@@ -336,6 +337,48 @@
 
                         </RelativeLayout>
                     </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rellay_mapa"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.55"
+                        android:background="@color/lime_ultra_dark_plus"
+                        android:layout_marginStart="8dp"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackground">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <ImageView
+                                android:id="@+id/imgView8"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerHorizontal="true"
+                                android:adjustViewBounds="true"
+                                android:padding="8dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/mapa"
+                                app:tint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/imgView8"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:text="Mapas"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
 
                 </LinearLayout>
 
